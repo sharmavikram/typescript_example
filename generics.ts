@@ -119,3 +119,9 @@ console.log(`key ${keyAB}`);
 
 let keyABC = getKeysABC<abc>([1, 'hello', true]);
 console.log(`key ${keyABC}`);
+
+/************ generics with conditional types inferences ****************************/
+
+type extractArrayType <T> = T extends (infer u)[] ? u: string;
+let stringType : extractArrayType<["test"]> = "test";
+console.log(stringType);
