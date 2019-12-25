@@ -4,4 +4,7 @@
 2. How to create interface
 3. How to create static function and veriable
 4. How to create namespaces
-5. How to create decorators
+5. How to create decorators 
+    Need to enable below key while configuring decorators
+    "experimentalDecorators": true,        
+    "emitDecoratorMetadata": true
