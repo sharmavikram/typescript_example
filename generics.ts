@@ -71,3 +71,51 @@ let fc: FirstClass = GC.create(FirstClass);
 //console.log(fc.id);
 let GC1 = new GenericCreator <SecondClass>();
 let sc: SecondClass = GC1.create(SecondClass);
+
+/************ generics with conditional types ****************************/
+
+type numberOrString<T> = T extends number ? number: string;
+
+function isNumberOrString<T>(input: numberOrString <T>) {
+
+        console.log(`numberOrString : ${input}`);
+}
+isNumberOrString<number>(1);
+isNumberOrString<string>('Hello');
+
+/************ generics with conditional types with interface ****************************/
+
+interface a {
+    a: number;
+}
+interface ab {
+    a: number;
+    b: string;
+} 
+interface abc {
+    a: number;
+    b: string;
+    c: boolean;
+}
+
+type abc_ab_a <T> = T extends abc ? [number, string, boolean]:
+                    T extends ab ? [number, string]:
+                    T extends a ? [number]: never;
+                    
+function getKeysABC<T>(key: abc_ab_a<T>) {
+    let [...args] = key;
+    let keyString = ":";
+    for(let arg of args) {
+        keyString+=` ${arg}`;
+    }
+    return keyString;
+}
+
+let keyA = getKeysABC<a>([1]);
+console.log(`key ${keyA}`)
+
+let keyAB = getKeysABC<ab>([1, 'hello']);
+console.log(`key ${keyAB}`);
+
+let keyABC = getKeysABC<abc>([1, 'hello', true]);
+console.log(`key ${keyABC}`);
