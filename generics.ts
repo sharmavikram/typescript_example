@@ -24,10 +24,9 @@
  console.log(stringConcat.concatenatorArray(stringArray));
  // number concat
  console.log(numberConcat.concatenatorArray(numberArray)); 
-// will return an error because of return type is string
 
 
-/************ With Class **************************8 */
+/************ With Class ****************************/
 
 class GenericClass {
     private _name: string;
@@ -48,3 +47,27 @@ let myArray = [
 
 let arrayConcat = new concatenator<GenericClass>();
 console.log(arrayConcat.concatenatorArray(myArray));
+
+/************ Creating a new objects with generics ****************************/
+class FirstClass {
+    id: number | undefined;
+}
+
+class SecondClass {
+    name: string | undefined;
+}
+
+
+class GenericCreator < T > {
+
+    create(arg1: {new(): T}): T {
+        return new arg1();
+    }
+}
+
+let GC = new GenericCreator <FirstClass>();
+let fc: FirstClass = GC.create(FirstClass);
+// fc.id = 1; 
+//console.log(fc.id);
+let GC1 = new GenericCreator <SecondClass>();
+let sc: SecondClass = GC1.create(SecondClass);
