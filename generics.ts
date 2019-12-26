@@ -10,7 +10,7 @@
             if(i > 0) {
                 returnString +=" ";
             }
-            returnString +=inputArray[i].toString();
+            // returnString +=inputArray[i].toString();
         }
         return returnString;
 
