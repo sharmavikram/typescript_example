@@ -6,9 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc",
-    "prod":"node *.js"
-
+    "prod": "node *.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.0"
+  }
 }
