@@ -6,6 +6,9 @@
  * Promise callback 
  *  1. resolve
  *  2. reject
+ * 
+ * Note: we can pass the message under resolve or reject function
+ * resolve(message); reject(errorMessage);
  */
 
 /********************Resolve Example******************************* */
@@ -61,3 +64,57 @@
      )
  }
  console.log(callErrorPromise());
+
+ /********************Promise example with asnyc and await********************* */
+
+ function awaitDelayed() : Promise<void>{ 
+     return new Promise <void> (
+         (
+             resolve: () => void,
+             reject: () => void
+         ) => {
+             function afterawait() {
+                 console.log('calling resolve');
+                 resolve();
+             }
+             setTimeout(afterawait, 1000);
+         }
+     )
+ }
+
+async function callAwait() {
+    console.log('call await function');
+    await awaitDelayed();
+    console.log('after await delayed');
+} 
+callAwait();
+
+/***********Promise with async and await with error************ */
+
+function awaitErrorDelay() : Promise<void> {
+    return new Promise <void> (
+        (
+            resolve: () => void,
+            reject: (error: string) => void,
+        ) => {
+
+            function afterWait() {
+                console.log('await error called');
+                reject('error called');
+            }
+            setTimeout(afterWait, 1000);
+        }
+    )
+}
+
+async function errorAwaitCalled () {
+    console.log('Await error function called')
+    try {
+        await awaitErrorDelay();
+    }
+    catch(error) {
+        console.log(error);
+    }
+    console.log('after error called');
+}
+errorAwaitCalled();
