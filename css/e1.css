@@ -41,17 +41,17 @@ h1 {
 }
 
 h2 {
-  text-align: "center";
+  text-align: center;
 }
 
 h3 {
-  text-align: "left";
-  float: "right";
+  text-align: left;
+  float: right;
 }
 
 h4 {
-  text-align: "right";
-  float: "left";
+  text-align: right;
+  float: left;
 }
 
 .minWidthDiv {
@@ -64,9 +64,9 @@ h4 {
 
 .commonWidth {
   width: "20%";
-  display: "block";
-  display: "inline-block";
-  display: "none";
+  display: block;
+  display: inline-block;
+  display: none;
 }
 
 /*# sourceMappingURL=e1.css.map */
