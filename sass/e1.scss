@@ -1,5 +1,36 @@
-$color: #000;
 
+@import "variables.scss";
 #htmlTag {
     background-color: $color;
+}
+/**margin**/
+#{$div} #{$hash}#{$idSelector} {
+    #{$margin+$dash+$left}: $ten+$px;
+}
+#{$div} #{$dot}#{$classSelector} {
+    #{$margin+$dash+$top}: $twenty+$px;
+}
+#{$div} #{$greaterThan} #{$dot}#{$classSelector} {
+    #{$margin+$dash+$right}: $five+$percentage;
+}
+#{$div} #{$greaterThan} #{$dot}#{$classSelector} {
+    #{$margin+$dash+$bottom}: $five+$percentage;
+}
+
+/**padding*/
+#{$div} #{$dot}#{$classSelector} {
+    #{$padding+$dash+$left}: $twenty+$px;
+}
+#{$div} #{$dot}#{$classSelector} {
+    #{$padding+$dash+$top}: $twenty+$px;
+}
+#{$div} #{$greaterThan} #{$dot}#{$classSelector} {
+    #{$padding+$dash+$right}: $five+$percentage;
+}
+#{$div} #{$greaterThan} #{$dot}#{$classSelector} {
+    #{$padding+$dash+$bottom}: $five*$five+$percentage; //calculation scss
+}
+
+#{h1} {
+    #{$font+$dash+$size} :$ten+$px;
 }

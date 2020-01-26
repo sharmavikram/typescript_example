@@ -1,0 +1,43 @@
+#htmlTag {
+  background-color: #000;
+}
+
+/**margin**/
+div #myId {
+  margin-left: 10px;
+}
+
+div .myClass {
+  margin-top: 20px;
+}
+
+div > .myClass {
+  margin-right: 5em;
+}
+
+div > .myClass {
+  margin-bottom: 5em;
+}
+
+/**padding*/
+div .myClass {
+  padding-left: 20px;
+}
+
+div .myClass {
+  padding-top: 20px;
+}
+
+div > .myClass {
+  padding-right: 5em;
+}
+
+div > .myClass {
+  padding-bottom: 25em;
+}
+
+h1 {
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=e1.css.map */
