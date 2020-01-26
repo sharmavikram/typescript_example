@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+@mixin button-shape {
+    border: $one+$px $solid $default_color;
+    #{$height}: $five*$ten+$px;
+    #{$color}: $default_color;
+    #{$font+$dash+$size}:$ten+$px;
+}
+
+@mixin link {
+    #{$cursor}: pointer;
+}
+
+@mixin dynamic_cursor($value) { //pass nth params
+    #{$cursor}: $value;
+}
+
+.btn-success {
+    @include button-shape;
+    @include dynamic_cursor(default);
+    background-color: green;
+}
+
+.btn-danger {
+    @include button-shape;
+    background-color: red;
+    @include link;
+}
+.btn-default {
+    @include button-shape;
+    @include dynamic_cursor(copy);
+    background-color: #ffffff;
+}
+
+
