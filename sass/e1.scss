@@ -34,3 +34,23 @@
 #{h1} {
     #{$font+$dash+$size} :$ten+$px;
 }
+#{h2} {
+    #{$text+$dash+$algin}: $center;
+}
+#{h3} {
+    #{$text+$dash+$algin}: $left;
+    #{$float}: $right;
+}
+#{h4} {
+    #{$text+$dash+$algin}: $right;
+    #{$float}: $left;
+}
+#{$dot}minWidthDiv{
+    #{$min+$dash+$width}:$ten+'%';
+}
+#{$dot}maxWidthDiv{
+    #{$max+$dash+$width}:$ten*$ten+'%';
+}
+#{$dot}commonWidth{
+    #{$width}:$ten*$ten+'%';
+}

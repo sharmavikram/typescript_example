@@ -40,4 +40,30 @@ h1 {
   font-size: 10px;
 }
 
+h2 {
+  text-align: "center";
+}
+
+h3 {
+  text-align: "left";
+  float: "right";
+}
+
+h4 {
+  text-align: "right";
+  float: "left";
+}
+
+.minWidthDiv {
+  min-width: "10%";
+}
+
+.maxWidthDiv {
+  max-width: "100%";
+}
+
+.commonWidth {
+  width: "100%";
+}
+
 /*# sourceMappingURL=e1.css.map */
