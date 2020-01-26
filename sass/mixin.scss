@@ -51,3 +51,33 @@
     color: white;
   }
 
+  /** text formats */
+  $text-algin: $left, $right, $center;
+  @each $text_align in $text-algin {
+        #{$dot}#{$text}#{$dash}#{$text_align} {
+            #{$text+$dash+$algin}: $text_align;
+      }
+      
+  }
+ $number: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; 
+ $margin-algin: $left, $right, $top, $bottom;
+ @each $no in $number {
+    @each $margin_align in $margin-algin {
+        #{$dot}#{$margin}#{$dash}#{$margin_align} {
+            #{$margin}#{$dash}#{$margin_align}: $no+$px;
+        }
+        #{$dot}#{$padding}#{$dash}#{$margin_align} {
+            #{$padding}#{$dash}#{$margin_align}: $no+$px;
+        }
+        
+    }
+    // end of margin
+ }
+ @each $no in $number {
+    .common#{$dash}#{$width}#{$dash}#{$no}#{$px} {
+        #{$width}: $no+$px;
+    }
+ }
+
+
+
