@@ -1,0 +1,16 @@
+@import "variables.scss";
+nav {
+    ul {
+      #{$margin}: $zero;
+      #{$padding}: $zero;
+      #{list-style}: $none;
+    }
+    li {
+      #{$display}: $inline+$dash+$block;
+    }
+    a {
+      #{$display}: $block;
+      #{$padding}: 6px 12px;
+      text-decoration: none;
+    }
+  }
