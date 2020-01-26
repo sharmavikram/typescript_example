@@ -63,10 +63,10 @@
  $margin-algin: $left, $right, $top, $bottom;
  @each $no in $number {
     @each $margin_align in $margin-algin {
-        #{$dot}#{$margin}#{$dash}#{$margin_align} {
+        #{$dot}#{$margin}#{$dash}#{$margin_align}#{$dash}#{$no}#{$px} {
             #{$margin}#{$dash}#{$margin_align}: $no+$px;
         }
-        #{$dot}#{$padding}#{$dash}#{$margin_align} {
+        #{$dot}#{$padding}#{$dash}#{$margin_align}#{$dash}#{$no}#{$px} {
             #{$padding}#{$dash}#{$margin_align}: $no+$px;
         }
         
