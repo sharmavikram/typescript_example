@@ -15,21 +15,39 @@
     #{$cursor}: $value;
 }
 
-.btn-success {
+.#{$btn}#{$dash}success {
     @include button-shape;
     @include dynamic_cursor(default);
     background-color: green;
 }
 
-.btn-danger {
+.#{$btn}#{$dash}danger {
     @include button-shape;
     background-color: red;
     @include link;
 }
-.btn-default {
+.#{$btn}#{$dash}default {
     @include button-shape;
     @include dynamic_cursor(copy);
     background-color: #ffffff;
 }
 
+.button-basic  {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-report  {
+    @extend .button-basic;
+    background-color: red;
+  }
+  
+  .button-submit  {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+  }
 
