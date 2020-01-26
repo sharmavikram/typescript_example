@@ -52,5 +52,8 @@
     #{$max+$dash+$width}:$ten*$ten+'%';
 }
 #{$dot}commonWidth{
-    #{$width}:$ten*$ten+'%';
+    #{$width}:$ten+$ten+'%';
+    #{$display}: $block;
+    #{$display}: $inline+$dash+$block;
+    #{$display}: $none;
 }
