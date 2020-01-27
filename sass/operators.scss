@@ -1,0 +1,24 @@
+@debug (1 + 2) * 3;
+@debug(2+2);
+//==================================
+@debug 1px == 1px; // true
+@debug 1px != 1px; // false
+
+@debug 'vikram' == vikram; // true
+@debug 'vikram' == 'vikram'; // true
+@debug 'vikram' == 'vikram1'; // false
+
+@debug  true == true; // true
+@debug  true != true; // false
+@debug  true == false; // false
+@debug null !=false; //true
+@debug null ==true; //false
+//=======================================
+@debug 100 >=100; //true
+@debug 100 > 99; //true
+@debug 99 >=100; //false
+@debug 99 < 100; //true
+@debug 100px >=100; //true
+@debug 100 > 99px; //true
+//========================================
+
