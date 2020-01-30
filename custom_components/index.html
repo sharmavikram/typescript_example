@@ -1,9 +1,24 @@
 <html>
     <head>
-        <script src="wordcount.js" defer></script>
+        
     </head>
     <body>
         <word-count text='hello world' name="vikram"></word-count>
     </body>
-  
+    <script>
+    customElements.define('word-count',
+    class extends HTMLElement {
+        constructor() {
+        super();
+        const pElem = document.createElement('p');
+        pElem.textContent = this.getAttribute('text');
+        const span = document.createElement('span');
+        span.textContent = this.getAttribute('name');
+        const shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.appendChild(pElem);
+        shadowRoot.appendChild(span);
+        }
+    }
+    );
+    </script>
 </html>
