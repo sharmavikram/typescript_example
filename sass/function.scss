@@ -5,6 +5,8 @@ $fontappend: 'arial';
 $zip1: 1px 2px 3px 4px;
 $zip2: 1em 2em 3em 4em;
 $zip3: red green blue yellow;
+$el: element;
+$el1: font;
 html {
     background: length($list );
     background: nth($listone, 2 );
@@ -45,3 +47,13 @@ $map3 : (
 
 }
 
+// example of if else conditions
+.bar {
+    @if($el ==element) {
+        content: 'font';   
+    }@else if($el1 == font) {
+        font-size: $ten+$px;
+    }@else {
+        font-family: $fontappend;
+    }
+}

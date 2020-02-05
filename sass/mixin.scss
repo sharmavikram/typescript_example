@@ -113,3 +113,20 @@ body {
     // 0% {opacity: 0}
     // 100% {opacity: 1}
 }
+
+@for $i from 1 to 6 {
+    #{nth($headers,$i)}{
+        font-size: nth($headerFont, $i)+$px;
+    }
+}
+
+// for each loop using data set
+$headerMap: (
+    h1: 55px,
+    h2: 45px
+);
+@each $head, $font in $headerMap {
+    #{$head} {
+        font-size: $font;
+    }
+}

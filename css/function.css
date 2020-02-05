@@ -18,3 +18,7 @@ html {
   content: ("k2": "1px");
   content: ("key1": "value2");
 }
+
+.bar {
+  content: "font";
+}
