@@ -1,0 +1,20 @@
+html {
+  background: 3;
+  background: 2px;
+  background: 1px 1em 3px gray;
+  background: 1px 2px 3px gray, 1em 1em 1em white, 7px 8px 9px white;
+  background: 1px 2px 3px gray, 4px 5px 6px black, 7px 8px 9px white, 1px, 2px, 3px, gray;
+  font-family: "arial", "sans-serif";
+  background-color: 1px 1em red, 2px 2em green, 3px 3em blue, 4px 4em yellow;
+}
+
+.foo {
+  content: "k", "k2";
+  content: "1em", "1px";
+  content: true;
+  content: false;
+  content: "divId";
+  content: ("k": "1em", "k2": "1px", "key": "value", "key1": "value2", "key2": "value2");
+  content: ("k2": "1px");
+  content: ("key1": "value2");
+}

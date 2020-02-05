@@ -415,4 +415,14 @@
   width: 10px;
 }
 
-/*# sourceMappingURL=mixin.css.map */
+/** mixin with params**/
+body {
+  box-shadow: 1px 1px 2px black;
+  -moz-box-shadow: 1px 1px 2px black;
+  -webkit-box-shadow: 1px 1px 2px black;
+}
+
+@-webkit-keyframe frame {}
+@-o-keyframe frame {}
+@-moz-keyframe frame {}
+@-keyframe frame {}

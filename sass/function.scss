@@ -1,0 +1,47 @@
+@import "variables.scss";
+$list: 1px 2px 3px gray, 4px 5px 6px black, 7px 8px 9px white;
+$listone: 1px 2px 3px gray;
+$fontappend: 'arial';
+$zip1: 1px 2px 3px 4px;
+$zip2: 1em 2em 3em 4em;
+$zip3: red green blue yellow;
+html {
+    background: length($list );
+    background: nth($listone, 2 );
+    background: set-nth($listone, 2, 1em ); // replace 2nd position
+    background: set-nth($list, 2, 1em 1em 1em white ); // replace 2nd position from list
+    background: join($list, $listone); // join the two list
+    font-family: append($fontappend , 'sans-serif' ,comma ); //comma or space
+    //index function
+    background-color: zip($zip1, $zip2, $zip3);
+}
+
+// map function
+$map1: (
+    'k': '1em',
+    'k2': '1px'
+);
+
+$map2 : ('key': 'value', 'key1': 'value2', 'key2': 'value2');
+
+$map3 : (
+    name: 'divId',
+    number : 122,
+    nestedMap : (
+        url : 'abc',
+        width: '102px'
+    )
+);
+
+.foo {
+    content: map-keys($map1);
+    content: map-values($map1);
+    content: map-has-key($map1, 'k' ); // true
+    content: map-has-key($map1, 'k1' ); // false
+    content: map-get($map3 , 'name' );
+    content: inspect(map-merge($map1, $map2 )); //return an error with inspect function
+    content: inspect(map-remove($map1, 'k' )); // remove multiple key using k using comma seprated  
+    content: inspect(map-remove($map2, 'key','key2' ));
+
+}
+
