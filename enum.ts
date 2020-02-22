@@ -1,7 +1,7 @@
 /**
  * Enums allow us to define a set of named constants.
  * Enums can make it easier to document intent, or create a set of distinct cases.
- * TypeScript provides both numberic and string based enums.
+ * TypeScript provides both numeric and string based enums.
  */
 
  enum direction { 

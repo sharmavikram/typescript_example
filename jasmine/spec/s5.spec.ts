@@ -3,7 +3,7 @@
  * =====================
  * In date driven test, there are many times where a set of tests for the same pieces of code
  * needs to be repeated over and over with slightly different inputs. if you were testing the ability of a function to
- * recognize the occurences of a string.
+ * recognize the occurrences of a string.
  * 
  * Note: 
  * 1. we are creating own function

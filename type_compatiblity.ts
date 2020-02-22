@@ -1,5 +1,5 @@
 /**
- * Type compatibility in TypeScript is based on structural subtyping. Structural typing is a way of relating types based solely on their members. This is in contrast with nominal typing. 
+ * Type compatibility in TypeScript is based on structural sub typing. Structural typing is a way of relating types based solely on their members. This is in contrast with nominal typing. 
  */
 
 

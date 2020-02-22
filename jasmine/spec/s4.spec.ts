@@ -1,7 +1,7 @@
 /**
  * Skipping test:-
  * ================
- * it is similar to fource test, test can be skipped using xit instead of it and xdescribe 
+ * it is similar to force test, test can be skipped using xit instead of it and xdescribe 
  * instead of describe
  * 
  * We are skipping the test in two ways

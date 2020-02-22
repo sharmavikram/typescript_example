@@ -8,7 +8,7 @@ function secondDecorator(constructor: Function) {
     console.log('Second decorators');
     console.log("===========================");
 }
-function decoratorFectory(name: string) { //decorator fectory
+function decoratorFactory(name: string) { //decorator Factory
     return function(constructor: Function){
         console.log(name);
         console.log("===========================");
@@ -56,7 +56,7 @@ console.log("===========================");
 
 @singleDecorator
 @secondDecorator
-@decoratorFectory('vikram')
+@decoratorFactory('vikram')
 class classWithSimpleDecorator {
     @propertyDec name: string;
     public getDetails(@propertyDecWithParams fname: string, @propertyDecWithParams lname: string) {

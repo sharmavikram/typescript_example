@@ -1,13 +1,16 @@
 /**
  * Spies function
- * apies allows us to test to see whether a particular function was called. also 
+ * s
+ * 
+ * 
+ * pies allows us to test to see whether a particular function was called. also 
  * determine the actual parameters it was called with 
  * 
  * function name: spyOn, callFake
  * call fake function override the return value, basically used for small mocking
  */
 
- class mySpcifiedClass {
+ class mySpecifiedClass {
      testFunction(name: string) {
          console.log(name);
      }
@@ -28,7 +31,7 @@
  }
  describe("spy function",()=>{
      it("function should called with params",()=>{
-        let t1= new mySpcifiedClass();
+        let t1= new mySpecifiedClass();
         let spy = spyOn(t1, "testFunction");
         t1.testFunction("hello");
         expect(spy).toHaveBeenCalled();
@@ -37,7 +40,7 @@
 
      it("spying on callback function", ()=>{
         let d1 = new doCallback();
-        let t2 = new mySpcifiedClass();
+        let t2 = new mySpecifiedClass();
         let cspy = spyOn(d1, "callbackLog");
 
         t2.doCallBack(1, d1.callbackLog);

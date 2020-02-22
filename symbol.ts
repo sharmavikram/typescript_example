@@ -1,9 +1,9 @@
 /**
- * Symbols are primitve data type, just like number and string
- * it is inroduced in ECMAScripti2015
- * Eeach symbol has unique property
+ * Symbols are primitive data type, just like number and string
+ * it is introduced in ECMAScript2015
+ * Each symbol has unique property
  */
-/*************************Baisc symbol example*************************** */
+/*************************Basic symbol example*************************** */
 let s1 = Symbol("key");
 let s2 = Symbol("key");
 console.log(s1);

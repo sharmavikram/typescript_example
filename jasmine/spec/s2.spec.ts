@@ -1,9 +1,9 @@
 /**
  * Test start-up and tear down-approach
- * jasmine provides a machinism to define a function that will run before and after each test 
+ * jasmine provides a mechanism to define a function that will run before and after each test 
  * Note:- there is no tsconfig file to compile .ts file 
  * we need to first run ts s2.spec.ts 
- * aftet that jasmine s2.spec.js
+ * affect that jasmine s2.spec.js
  */
 
 
